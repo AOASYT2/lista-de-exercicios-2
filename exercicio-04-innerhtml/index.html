@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4 - Alterar conteúdo com innerHTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        button {
+            padding: 8px 16px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #mensagem {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f1f1f1;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 4 - Alterar conteúdo com innerHTML</h1>
+    
+    <button id="btnBoasVindas">Boas-vindas</button>
+    <button id="btnSobre">Sobre</button>
+    <button id="btnContato">Contato</button>
+    
+    <div id="mensagem">Clique em um dos botões acima para ver o conteúdo.</div>
+    
+    <script>
+        document.getElementById('btnBoasVindas').addEventListener('click', function() {
+            document.getElementById('mensagem').innerHTML = '<h2>Boas-vindas</h2><p>Seja bem-vindo ao nosso site! Esperamos que você aproveite sua visita.</p>';
+        });
+        
+        document.getElementById('btnSobre').addEventListener('click', function() {
+            document.getElementById('mensagem').innerHTML = '<h2>Sobre</h2><p>Somos uma empresa dedicada a criar soluções web inovadoras para nossos clientes.</p>';
+        });
+        
+        document.getElementById('btnContato').addEventListener('click', function() {
+            document.getElementById('mensagem').innerHTML = '<h2>Contato</h2><p>Email: contato@exemplo.com<br>Telefone: (11) 1234-5678</p>';
+        });
+    </script>
+</body>
+</html>

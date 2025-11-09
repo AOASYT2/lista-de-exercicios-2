@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8 - Alterar imagem</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        button {
+            padding: 8px 16px;
+            margin: 10px 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 8 - Alterar imagem</h1>
+    
+    <img id="imagem" src="https://picsum.photos/seed/imagem1/600/400.jpg" alt="Imagem">
+    
+    <div>
+        <button id="btnImagem1">Imagem 1</button>
+        <button id="btnImagem2">Imagem 2</button>
+    </div>
+    
+    <script>
+        document.getElementById('btnImagem1').addEventListener('click', function() {
+            document.getElementById('imagem').src = 'https://picsum.photos/seed/imagem1/600/400.jpg';
+        });
+        
+        document.getElementById('btnImagem2').addEventListener('click', function() {
+            document.getElementById('imagem').src = 'https://picsum.photos/seed/imagem2/600/400.jpg';
+        });
+    </script>
+</body>
+</html>

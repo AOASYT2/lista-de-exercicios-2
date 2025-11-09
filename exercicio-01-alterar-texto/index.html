@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1 - Alterar texto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        button {
+            padding: 8px 16px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 1 - Alterar texto</h1>
+    
+    <p id="texto">Bem-vindo!</p>
+    <button id="btnMudarTexto">Mudar texto</button>
+    
+    <script>
+        document.getElementById('btnMudarTexto').addEventListener('click', function() {
+            document.getElementById('texto').textContent = 'Texto alterado com sucesso!';
+        });
+    </script>
+</body>
+</html>

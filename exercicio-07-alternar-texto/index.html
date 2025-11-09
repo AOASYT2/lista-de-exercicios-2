@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7 - Alternar entre dois textos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        button {
+            padding: 8px 16px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #modo {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px;
+            text-align: center;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .modo-claro {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+        .modo-escuro {
+            background-color: #333;
+            color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 7 - Alternar entre dois textos</h1>
+    
+    <p id="modo" class="modo-claro">Modo Claro</p>
+    <button id="btnTrocarModo">Trocar modo</button>
+    
+    <script>
+        document.getElementById('btnTrocarModo').addEventListener('click', function() {
+            const modoElement = document.getElementById('modo');
+            
+            if (modoElement.textContent === 'Modo Claro') {
+                modoElement.textContent = 'Modo Escuro';
+                modoElement.className = 'modo-escuro';
+            } else {
+                modoElement.textContent = 'Modo Claro';
+                modoElement.className = 'modo-claro';
+            }
+        });
+    </script>
+</body>
+</html>

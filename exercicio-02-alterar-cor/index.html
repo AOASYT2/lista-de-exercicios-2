@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2 - Alterar cor do texto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        button {
+            padding: 8px 16px;
+            margin: 10px 5px;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #btnVermelho {
+            background-color: #f44336;
+        }
+        #btnAzul {
+            background-color: #2196F3;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 2 - Alterar cor do texto</h1>
+    
+    <h2 id="titulo">Este é um título colorido</h2>
+    <button id="btnVermelho">Vermelho</button>
+    <button id="btnAzul">Azul</button>
+    
+    <script>
+        document.getElementById('btnVermelho').addEventListener('click', function() {
+            document.getElementById('titulo').style.color = 'red';
+        });
+        
+        document.getElementById('btnAzul').addEventListener('click', function() {
+            document.getElementById('titulo').style.color = 'blue';
+        });
+    </script>
+</body>
+</html>

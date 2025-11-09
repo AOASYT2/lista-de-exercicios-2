@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 - Adicionar novos elementos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        button {
+            padding: 8px 16px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #f1f1f1;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 6 - Adicionar novos elementos</h1>
+    
+    <ul id="lista"></ul>
+    <button id="btnAdicionar">Adicionar item</button>
+    
+    <script>
+        document.getElementById('btnAdicionar').addEventListener('click', function() {
+            const lista = document.getElementById('lista');
+            const novoItem = document.createElement('li');
+            novoItem.textContent = 'Novo item';
+            lista.appendChild(novoItem);
+        });
+    </script>
+</body>
+</html>

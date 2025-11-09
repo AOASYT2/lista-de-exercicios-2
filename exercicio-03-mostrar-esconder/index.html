@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 - Mostrar e esconder elemento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        button {
+            padding: 8px 16px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 3 - Mostrar e esconder elemento</h1>
+    
+    <p id="paragrafo">Este é um parágrafo que pode ser ocultado ou exibido.</p>
+    <button id="btnOcultar">Ocultar</button>
+    
+    <script>
+        document.getElementById('btnOcultar').addEventListener('click', function() {
+            const paragrafo = document.getElementById('paragrafo');
+            
+            if (paragrafo.style.display === 'none') {
+                paragrafo.style.display = 'block';
+                this.textContent = 'Ocultar';
+            } else {
+                paragrafo.style.display = 'none';
+                this.textContent = 'Mostrar';
+            }
+        });
+    </script>
+</body>
+</html>
